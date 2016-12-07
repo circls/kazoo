@@ -9,7 +9,7 @@ Only superadmin can use this module.
 CSV files for all actions use the same list of fields. Name of field match the name of keys in CouchDB rate document.
 
 Available fields:
-* `account_id` - reseller's account (see **Note 1** bellow)
+* `account_id` - reseller's account (see **Note 1** below)
 * `description` - description for rate
 * `direction` - direction of call leg ("inbound", "outbound"), if not set - rate matches both directions
 * `iso_country_code` - [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements) code for prefix's country
