@@ -6,8 +6,6 @@ Only superadmin can use this module.
 
 ## Fields
 
-CSV files for all actions use the same list of fields. Name of field match the name of keys in CouchDB rate document.
-
 Available fields:
 * `account_id` - reseller's account (see **Note 1** below)
 * `description` - description for rate
@@ -25,6 +23,8 @@ Available fields:
 * `rate_version` - rate version
 * `ratedeck_name` -  ratedeck name, assigned to account via service plan
 * `weight` - when found several rates with same prefix, used rate with higher weight. If not set - calculated from `prefix` length and `rate_cost` (`pvt_rate_cost`)
+
+CSV files for all actions use the same list of fields. Names of fields match the names of keys in the CouchDB [rate document](../../crossbar/doc/rates.md#schema).
 
 **Note 1**: for `import` & `delete` actions, value of `account_id` from CSV file will be ignored, value for this field is taken from task Account-ID .
 
@@ -54,5 +54,5 @@ No input file.
 ### Delete
 
 Delete rates for prefixes in CSV file.
-`prefix` is mandatory field.
-Rate deleted only if all defined fields in CSV file match appropriate keys in rate document. Undefined field in CSV file means "match any".
+`prefix` is a mandatory field.
+The rate will be deleted only if all defined fields in CSV file match the appropriate keys in rate document. An undefined field in CSV file means "match any".
