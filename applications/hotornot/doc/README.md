@@ -1,11 +1,12 @@
-# Hot or Not *Call rating*
+# Hot or Not: *Call rating*
 
 This application serves `rate_req` AMQP requests.
 
 Rates are stored in a system-wide "ratedeck" database.
 
-Each rate is separate document:
-```JSON
+Each rate is a separate document:
+
+```json
 {
     "_id": "f36cac061205f7a0f7fde6b4d3370bf9",
     "_rev": "1-1b67fb507c69c35200178a9b1e0e6cfc",
@@ -64,7 +65,6 @@ Enable the trie by setting `use_trie` to `true` in the `system_config/hotornot` 
 ```shell
 sup kapps_config set_boolean hotornot use_trie true
 ```
-
 
 ## Filters
 
